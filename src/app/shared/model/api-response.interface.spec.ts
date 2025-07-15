@@ -1,4 +1,4 @@
-import { ApiResponse } from './api-response.interface';
+import { ApiResponse } from 'shared/model/api-response.interface';
 
 describe('ApiResponse', () => {
   it('should create an instance', () => {
