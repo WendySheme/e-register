@@ -3,6 +3,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import { WebSocketService } from './web-socket-service.service';
 import { environment } from '../../environments/environments';
 import io from 'socket.io-client';
+import {emit}
 
 
 @Injectable({
@@ -76,4 +77,4 @@ emit(event: string, data: any): void {
   
   }
 }
-joinR
+}
