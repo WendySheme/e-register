@@ -3,7 +3,7 @@ import { JustificationType } from "./justification.interface";
 import { UserRole } from "./user.interface";
 
 //login form
-export class Form {
+export class loginForm {
 email: string;
 password: string;
 role:UserRole;

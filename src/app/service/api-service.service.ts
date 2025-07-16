@@ -33,10 +33,7 @@ get<T> (endpoint:string, params?:HttpParams) : Observable<T>
     ,
     { headers: this.getHeaders(), params, }) .pipe(retry(1))
       
-    catchError; //da rivedere
-    
-    
-    
+    catchError(this.handleError);
       }
     
  put<T>(endpoint: string, data: any): Observable<T> {
@@ -44,15 +41,35 @@ get<T> (endpoint:string, params?:HttpParams) : Observable<T>
     `${this.baseUrl}${endpoint}`,
     data,
     { headers: this.getHeaders() }
-  ).pipe(catchError); //da rivedere
+  ).pipe(catchError(this.handleError));
+   //da rivedere
 }
  
+delete<T>(endpoint:string):Observable<T>
+{
+  return this.http.delete<T>(
+    `${this.baseUrl}${endpoint}`,
+    { headers: this.getHeaders() }
+  ).pipe(catchError(this.handleError));
+  //da rivedere
+}
+
+
+post<T>(endpoint: string, data: any): Observable<T> {
+  return this.http.post<T>(
+    `${this.baseUrl}${endpoint}`,
+    data,
+    { headers: this.getHeaders() }
+  )
     }
-  
 
-  
+  private handleError(error:any):Observable<never>
+  {
+  console.error('Errore API:', error)
+  return throwError(() => error);
+  }
 
-
+  }
 
 
 

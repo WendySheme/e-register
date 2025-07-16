@@ -1,12 +1,12 @@
-export class Error {
+
+
+
+export class AppError {
 
 code: number;
 message: string;
 details?: any;
 timestamp: Date;
-
-
-
 }
 
 export class ValidationError 

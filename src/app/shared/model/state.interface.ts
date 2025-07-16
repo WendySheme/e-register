@@ -1,6 +1,6 @@
 import { Attendance, attendanceStatus } from "./attendance.interface";
 import { studentStats } from "./dashboard.interface";
-import { Error } from "./error.interface";
+import { AppError } from "./error.interface";
 import { Justification } from "./justification.interface";
 import { Notification } from "./notification.interface";
 import { User } from "./user.interface";
