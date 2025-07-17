@@ -1,4 +1,6 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://your-api-url.com'
+  apiUrl: 'http://localhost:3000/api',
+  enableRealTimeUpdates: true,
+  webSocketUrl: 'ws://localhost:3000', 
 };
