@@ -1,1 +1,8 @@
-<p>tutor-dashboard-component works!</p>
+<div class="dashboard-container">
+  <h1>Tutor Dashboard</h1>
+  <div class="notification-container">
+    <div *ngFor="let notification of notifications" class="notification">
+      {{ notification | json }}
+    </div>
+  </div>
+</div>
